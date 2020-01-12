@@ -13,8 +13,8 @@ var initialsEl = document.getElementById("initials");
 var feedbackEl = document.getElementById("feedback");
 
 // sound effects
-var sfxRight = new Audio("assets/sfx/correct.wav");
-var sfxWrong = new Audio("assets/sfx/incorrect.wav");
+//var sfxRight = new Audio("assets/sfx/correct.wav");
+//var sfxWrong = new Audio("assets/sfx/incorrect.wav");
 
 function startQuiz() {
   // hide start screen
@@ -75,12 +75,12 @@ function questionClick() {
     timerEl.textContent = time;
 
     // play "wrong" sound effect
-    sfxWrong.play();
+    //sfxWrong.play();
 
     feedbackEl.textContent = "Wrong!";
   } else {
     // play "right" sound effect
-    sfxRight.play();
+    //sfxRight.play();
 
     feedbackEl.textContent = "Correct!";
   }
@@ -150,7 +150,7 @@ function saveHighscore() {
     window.localStorage.setItem("highscores", JSON.stringify(highscores));
 
     // redirect to next page
-    window.location.href = "highscores.html";
+    window.location.href = "score.html";
   }
 }
 

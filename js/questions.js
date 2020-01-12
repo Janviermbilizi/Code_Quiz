@@ -1,6 +1,16 @@
 // list of all questions, choices, and answers
 var questions = [
   {
+    title: "What are the two basic groups of dataypes in JavaScript?",
+    choices: [
+      "Primitive and attribute",
+      "Primitive and reference types",
+      "Reference types and attribute",
+      "None of the above"
+    ],
+    answer: "Primitive and reference types"
+  },
+  {
     title: "Commonly used data types DO NOT include:",
     choices: ["strings", "booleans", "alerts", "numbers"],
     answer: "alerts"
@@ -31,5 +41,10 @@ var questions = [
       "A very useful tool used during development and debugging for printing content to the debugger is:",
     choices: ["JavaScript", "terminal / bash", "for loops", "console.log"],
     answer: "console.log"
+  },
+  {
+    title: "What is the type of Pop up boxes available in JavaScript?:",
+    choices: ["Alert", "Confirm", "Prompt", "All the above"],
+    answer: "All the above"
   }
 ];
