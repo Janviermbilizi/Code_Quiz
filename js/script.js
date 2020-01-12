@@ -1,20 +1,16 @@
-// variables to keep track of quiz state
+// DOM elements
+var questionsEl = document.querySelector("#questions");
+var timerEl = document.querySelector("#time");
+var choicesEl = document.querySelector("#choices");
+var submitBtn = document.querySelector("#submit");
+var startBtn = document.querySelector("#start");
+var initialsEl = document.querySelector("#initials");
+var feedbackEl = document.querySelector("#feedback");
+
+// quiz state variables
 var currentQuestionIndex = 0;
 var time = questions.length * 15;
 var timerId;
-
-// variables to reference DOM elements
-var questionsEl = document.getElementById("questions");
-var timerEl = document.getElementById("time");
-var choicesEl = document.getElementById("choices");
-var submitBtn = document.getElementById("submit");
-var startBtn = document.getElementById("start");
-var initialsEl = document.getElementById("initials");
-var feedbackEl = document.getElementById("feedback");
-
-// sound effects
-//var sfxRight = new Audio("assets/sfx/correct.wav");
-//var sfxWrong = new Audio("assets/sfx/incorrect.wav");
 
 function startQuiz() {
   // hide start screen
@@ -70,31 +66,23 @@ function questionClick() {
     if (time < 0) {
       time = 0;
     }
-
     // display new time on page
     timerEl.textContent = time;
-
-    // play "wrong" sound effect
-    //sfxWrong.play();
-
     feedbackEl.textContent = "Wrong!";
   } else {
-    // play "right" sound effect
-    //sfxRight.play();
-
     feedbackEl.textContent = "Correct!";
   }
 
-  // flash right/wrong feedback on page for half a second
+  // flash right/wrong feedback
   feedbackEl.setAttribute("class", "feedback");
   setTimeout(function() {
     feedbackEl.setAttribute("class", "feedback hide");
   }, 1000);
 
-  // move to next question
+  // next question
   currentQuestionIndex++;
 
-  // check if we've run out of questions
+  // time checker
   if (currentQuestionIndex === questions.length) {
     quizEnd();
   } else {
@@ -133,7 +121,6 @@ function saveHighscore() {
   // get value of input box
   var initials = initialsEl.value.trim();
 
-  // make sure value wasn't empty
   if (initials !== "") {
     // get saved scores from localstorage, or if not any, set to empty array
     var highscores =
@@ -161,10 +148,10 @@ function checkForEnter(event) {
   }
 }
 
-// user clicks button to submit initials
+// submit initials
 submitBtn.onclick = saveHighscore;
 
-// user clicks button to start quiz
+// start quiz
 startBtn.onclick = startQuiz;
 
 initialsEl.onkeyup = checkForEnter;

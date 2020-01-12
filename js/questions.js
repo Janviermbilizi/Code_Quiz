@@ -1,7 +1,7 @@
 // list of all questions, choices, and answers
 var questions = [
   {
-    title: "What are the two basic groups of dataypes in JavaScript?",
+    title: "What are the two basic groups of data types in JavaScript?",
     choices: [
       "Primitive and attribute",
       "Primitive and reference types",
@@ -14,6 +14,16 @@ var questions = [
     title: "Commonly used data types DO NOT include:",
     choices: ["strings", "booleans", "alerts", "numbers"],
     answer: "alerts"
+  },
+  {
+    title: "What is the data type of variables in JavaScript?",
+    choices: [
+      "Object data types",
+      "Function data type",
+      "None of the above",
+      "All of the above"
+    ],
+    answer: "Object data types"
   },
   {
     title: "The condition in an if / else statement is enclosed within ____.",

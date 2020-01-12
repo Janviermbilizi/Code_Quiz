@@ -2,6 +2,39 @@ body {
   font-family: Arial;
   font-size: 120%;
 }
+.wrapper {
+  margin: 100px auto 0 auto;
+  max-width: 600px;
+}
+
+.hide {
+  display: none;
+}
+
+.start {
+  text-align: center;
+}
+
+.scores {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.feedback {
+  font-style: italic;
+  font-size: 120%;
+  margin-top: 20px;
+  padding-top: 10px;
+  color: gray;
+  border-top: 2px solid #ccc;
+}
+
+.timer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
 
 a {
   color: black;
@@ -10,7 +43,7 @@ a {
 }
 
 a:hover {
-  color: #e4dea9;
+  color: #8c8c99;
 }
 
 button {
@@ -51,38 +84,4 @@ li {
 
 li:nth-child(odd) {
   background-color: #f3edfc;
-}
-
-.wrapper {
-  margin: 100px auto 0 auto;
-  max-width: 600px;
-}
-
-.hide {
-  display: none;
-}
-
-.start {
-  text-align: center;
-}
-
-.scores {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
-.feedback {
-  font-style: italic;
-  font-size: 120%;
-  margin-top: 20px;
-  padding-top: 10px;
-  color: gray;
-  border-top: 2px solid #ccc;
-}
-
-.timer {
-  position: absolute;
-  top: 10px;
-  right: 10px;
 }
