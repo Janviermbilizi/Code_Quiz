@@ -69,8 +69,12 @@ function questionClick() {
     // display new time on page
     timerEl.textContent = time;
     feedbackEl.textContent = "Wrong!";
+    feedbackEl.style.color = "red";
+    feedbackEl.style.fontSize = "150px";
   } else {
     feedbackEl.textContent = "Correct!";
+    feedbackEl.style.color = "green";
+    feedbackEl.style.fontSize = "150px";
   }
 
   // flash right/wrong feedback
