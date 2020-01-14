@@ -50,6 +50,7 @@ button {
   display: inline-block;
   margin: 5px;
   cursor: pointer;
+  font-family: "Architects Daughter", cursive;
   font-size: 100%;
   background-color: teal;
   border-radius: 5px;
